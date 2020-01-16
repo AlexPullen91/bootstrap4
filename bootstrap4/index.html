@@ -12,6 +12,9 @@
 		integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
 	</script>
 	<script src="https://kit.fontawesome.com/e903bae35e.js" crossorigin="anonymous"></script>
+
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css" type="text/css" />
 </head>
 
 <body>
@@ -45,7 +48,7 @@
 			<a href="/login">Sign In / Sign Up!</a>
 		</div>
 	</nav>
-	<article class="container mt-3">
+	<!-- <div class="container alert-container">
 		<div class="row d-none d-sm-block">
 			<div class="col-12">
 				<div class="alert alert-warning">
@@ -54,25 +57,30 @@
 				</div>
 			</div>
 		</div>
+	</div> -->
+	<div class="container-fluid callout-container">
 		<!-- Callout -->
+        <div class="opaque-overlay">&nbsp;</div>
 		<div class="row">
 			<div class="col-12">
 				<section class="callout jumbotron text-center">
-					<h1>The finest whiskeys delivered to your doorstep.</h1>
+					<h1 class="jumbotron-header">The finest whiskeys delivered to your doorstep.</h1>
+                    <hr class="block-divider block-divider--orange">
 					<p class="lead">Sign up today to start receiving the world's best whiskeys every month.
 						<s class="d-none d-sm-inline">€19.99</s>
 						<span class="d-inline d-sm-none"><br></span>
 						<strong><mark>First one is free!</mark></strong> </p>
-					<button class="btn btn-success btn-lg">Sign up!</button>
+					<button class="btn btn-lg btn--cta btn--red" data-toggle="modal" data-target="#signUpModal">Sign up!</button>
 					<p class="text-muted">
 						<small>You must be over 18 to sign up to our service. Please, drink responsibly.</small></p>
 				</section>
 			</div>
 		</div>
 		<!-- /.callout -->
-		<hr>
+	</div>
 
-		<!-- Quotes -->
+	<!-- Quotes -->
+	<div class="container quotes-container">
 		<section class="quotes">
 			<div class="row">
 				<div class="col-12 my-5">
@@ -111,9 +119,10 @@
 					</div>
 		</section>
 		<!-- /.quotes -->
-		<hr>
+	</div>
 
-		<!-- Features -->
+	<!-- Features -->
+	<div class="features-container">
 		<section class="features">
 			<div class="row">
 				<div class="col-12 my-5">
@@ -158,10 +167,10 @@
 			</div>
 		</section>
 		<!-- /.features -->
-		<hr>
+	</div>
 
-		<!-- Monthly favourites -->
-		<!-- <section>
+	<!-- Monthly favourites -->
+	<!-- <section>
 			<h2 class="text-uppercase">Monthly favourites:</h2>
 			<table class="table table-hover">
 				<thead class="thead-light">
@@ -200,8 +209,43 @@
 				</tbody>
 			</table>
 		</section> -->
-		<!-- monthly favourites -->
-	</article>
+	<!-- monthly favourites -->
+
+
+	<div class="modal" tabindex="-1" role="dialog" id="signUpModal">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Sign Up To Whiskey Drop!</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label>
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+							<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div class="form-group">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+							<div class="form-group">
+								<label for="repeatPassword">Repeat Password</label>
+								<input type="password" class="form-control" id="repeatPassword" placeholder="Repeat Password">
+                        </div>
+
+								<button type="submit" class="btn btn-success">Submit</button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
 	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
 		integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
 	</script>
